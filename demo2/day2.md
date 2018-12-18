@@ -41,5 +41,7 @@ submit,url,number,image,hidden,file,search,email,pregress,date,datetime
 - placeholder
 
 ps：\(^o^)/~（什么鬼）
+
 h5新增属性，有些可以完成填写验证
+
 表单元素在被不支持h5的浏览器解析时，会把type解析为text
