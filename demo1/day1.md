@@ -12,6 +12,7 @@
 - 多媒体支持
  - 视频 
  - 音频
+
  **编辑器**
 > tang-say
 
@@ -23,6 +24,7 @@ webstrom hbuild(第一次听)
 >可以理解为h5声明
 
 **meta**
+
 属性
 - name
   比较重要的值，keyword，description，author,generator(应该是表示用什么编辑器写的，)
@@ -54,7 +56,7 @@ target的值有:self（默认）, _blank, 框架名称， _parent
 ```
 - 层布局
 - div+css布局
----
+
 >myadd 表格布局已过时，但其中的思想值得品味，因为后面出现的flex布局，栅格布局，感觉还是有相通点的
 
 *零碎点解读*
