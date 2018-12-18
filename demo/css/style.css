@@ -1,0 +1,15 @@
+h1{
+    color:red;
+    border: solid 1px darkgray;
+}
+td{
+    font-size: 12px;
+}
+.fs{
+    color: green;
+    font-size: 200px;
+    color: red;
+}
+#myh2{
+    color: blue;
+}
