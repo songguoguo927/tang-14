@@ -69,21 +69,32 @@
                 <img src="lab1img/img_head.jpg" alt=""><p>昵称</p>
             </div>
             <ul>
-                <li><span id="tu6"></span><a href="#">收货地址</a></li>
-                <li><span id="tu7"></span><a href="#">账户余额</a></li>
-                <li><span id="tu8"></span><a href="#">我的项目</a></li>
-                <li><span id="tu9"></span><a href="#">我的收益</a></li>
-                <li><span id="tu10"></span><a href="#">我的支持</a></li>
-                <li><span id="tu11"></span><a href="#">我的收藏</a></li>
+                <li>
+                    <div class="infoitem active">
+                        <span id="tu6"></span>
+                        <a href="#">收货地址</a>
+                    </div>
+                </li>
+                <li><div class="infoitem"><span id="tu7"></span><a href="#">账户余额</a></div></li>
+                <li><div class="infoitem"><span id="tu8"></span><a href="#">我的项目</a></div></li>
+                <li><div class="infoitem"><span id="tu9"></span><a href="#">我的收益</a></div></li>
+                <li><div class="infoitem"><span id="tu10"></span><a href="#">我的支持</a></div></li>
+                <li><div class="infoitem"><span id="tu11"></span><a href="#">我的收藏</a></div></li>
             </ul>
         </div>
         <div class="address">
             <a>收货地址</a>
             <hr>
             <ul>
-                <li><input type="radio" name="address" value="">地址一<a href="#">设为默认地址</a> <a href="#">修改</a> <a href="#">删除</a></li>
-                <li><input type="radio" name="address" value="">地址二</li>
-                <li><input type="radio" name="address" value="">地址三</li>
+                <li class="addressDetail"><input type="radio" name="address" value="">地址一
+                    <div class="addressFunc acolorBlue">
+                        <a href="#">[设为默认地址]</a>
+                        <a href="#">修改</a> 
+                        <a href="#">删除</a>
+                    </div>
+                </li>
+                <li class="addressDetail"><input type="radio" name="address" value="">地址二</li>
+                <li class="addressDetail"><input type="radio" name="address" value="">地址三</li>
             </ul>
             <button type=""><img src="lab1img/addbtn_08.png">添加新地址</button>
         </div>
@@ -93,31 +104,59 @@
         <div class="foot-main">
             <div class="left">
                 <ul class="left-top">
-                    <li><img src="lab1img/footerimg/footer_ding_11.png" alt="">发起人创建项目</li>>
-                    <li><img src="lab1img/footerimg/footer_tv_13.png" alt="">项目获得支持</li>>
-                    <li><img src="lab1img/footerimg/footer_repay_15.png" alt="">发起人发放回报</li>>
-                    <li><img src="lab1img/footerimg/footer_gift_17.png" alt="">用户得到回报</li>
+                    <li class="btncnt">
+                        <div class="footItem">
+                        <img src="lab1img/footerimg/footer_ding_11.png" alt="">发起人创建项目
+                        </div>
+                    </li>
+                    <li class="fuhao">></li>
+                    <li class="btncnt">
+                        <div class="footItem">
+                        <img src="lab1img/footerimg/footer_tv_13.png" alt="">项目获得支持
+                        </div>
+                    </li>
+                     <li class="fuhao">></li>
+
+                    <li class="btncnt">
+                        <div class="footItem">
+                        <img src="lab1img/footerimg/footer_repay_15.png" alt="">发起人发放回报
+                        </div>
+                    </li>
+                     <li class="fuhao">></li>
+
+                    <li class="btncnt">
+                        <div class="footItem">
+                        <img src="lab1img/footerimg/footer_gift_17.png" alt="">用户得到回报
+                        </div>
+                    </li>
+                        
                 </ul>
                 <ul class="left-bottom">
-                    <li>关于我们</li>|
-                    <li>服务条款</li>|
-                    <li>项目教程</li>|
-                    <li>新手帮助</li>|
-                    <li>常见问题</li>|
+                    <li>关于我们</li>
+                    <li>|</li>
+                    <li>服务条款</li>
+                    <li>|</li>
+                    <li>项目教程</li>
+                    <li>|</li>
+                    <li>新手帮助</li>
+                    <li>|</li>
+                    <li>常见问题</li>
+                    <li>|</li>
                     <li>意见反馈</li>
                 </ul>
             </div>
+              
             <div class="right">
                 <p>联系我们（9:00-18:00）</p>
-                <p><img src="lab1img/footerimg/footer_phone_05.png">400-000-000</p>
+                <div id="tel"><img src="lab1img/footerimg/footer_phone_05.png"><a href="#">400-000-000<a></div>
                 <p><img src="lab1img/footerimg/footer_mail_11.png">wuxiandao@zhongchou.com</p>
                 <p>qq群：123456789</p>
             </div>
             <div class="middle">
                 <p>微信公众号</p>
                 <img src="lab1img/footerimg/foot_ewm_05.png">
-            </div>
-            
+            </div>  
+                   
         </div>
         <div class="bottom">
             <p>©版权所有</p>
