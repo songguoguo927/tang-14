@@ -16,26 +16,39 @@ ul li a{
 }
 
 .top ul{
-    /*position: absolute;
-    /*top:50%;*/
-    /*transform: translateY(-50%);*/
+    display: block;
+    margin: 0 auto;
+    margin-top: 0px;
+    width: 80%;
+    margin-top: 13px;
+}
+.top .top-left{
+    float: left;
+    text-indent: 12px;/*缩进*/
 }
 .top .top-right{
     float: right;
     margin-right: 20px;
 }
+header{
+    border-bottom: 2px solid #337ab7;
+    font-size: 0.8em;
+}
+.header-content{
+    width: 80%;
+    position:relative;
+    margin: 0 auto;
+    
+}
 header .head{
-    width: 90%;
-    margin: 20px auto;
-    font-size: 13px;
-}
-header nav{
-    font-size: 16px;
-}
-header nav .top-right{
-    float: right;
+     
+    margin-top: 30px;
+    
 }
 header .head input{
+    position: relative;
+    top: -14px;
+    left: 56px;/*相对原位置定位*/
     width: 28%;
     height: 30px;
     border-radius: 20px;
@@ -45,14 +58,21 @@ header .head input{
     background-position: right;
 }
 header .head ul{
-    display: inline;
+    display: inline-block;
+    float: right;   
 }
-header .head ul li span{
+header .head ul li .bglogo{
     display: inline-block;
     background-image: url(lab1img/mark.png);
     background-repeat: no-repeat;
     width: 40px;
     height: 40px;
+}
+header .head ul li .item{
+    display: inline-block;
+}
+header .head ul li .item .slogan{
+    display: block;
 }
 header .head ul li #tu1{
     background-position:0px 0px; /*要显示的区域坐标，左上角为原点*/
@@ -63,35 +83,57 @@ header .head ul li #tu2{
 header .head ul li #tu3{
     background-position:0px -80px; 
 }
-header nav ul li span{
+header .nav{
+    height: 25px;
+}
+header .nav a{
+    font-size: 1em;
+    color: gray;
+}
+header .nav ul{
+    margin-bottom: 0px;
+}
+header .nav a:hover{
+    border-bottom: 3px solid blue;
+    color: black;
+}
+header .nav .nav-left{
+    float: left;
+}
+header .nav .nav-left .active{
+    border-bottom: 3px solid blue;
+}
+header .nav .nav-right{
+    position: absolute;
+    right: 0px;
+    
+}
+header .nav span{
     display: inline-block;
     background-image: url(lab1img/mark_nav.png);
     background-repeat: no-repeat;
     width: 22px;
     height: 22px;
 }
-header nav ul li #tu4{
+
+header .nav #tu4{
     background-position:0px -22px;
 }
-header nav ul li #tu5{
+header .nav #tu5{
     background-position:0px -66px;
 }
-header{
-    border-bottom: 2px solid #337ab7;;
-}
+
 section{
     background: whitesmoke;
 }
 section .secontent{
- width: 70%;
- height: 700px;
- margin: 0 auto;
- background: white;
- box-shadow: 0 10px 20px 0 rgba(0,0,0,0.08);
+    width: 80%;
+    height: 700px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.08);
     border-radius: 4px;
     border: 1px solid #eee;
-    margin-bottom: 30px;
-    margin-top: 20px;
 }
 section .secontent .info{
     padding-top: 20px;
