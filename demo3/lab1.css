@@ -1,15 +1,39 @@
-.top{
-    background: lightgray;
-}
-.top-right{
-    float: right;
-}
+
 ul li{
     list-style: none;
-    display: inline;
+    display: inline-block;
 }
 ul li a{
     text-decoration: none;
+}
+.top{
+    margin-top:-13px;
+    background: lightgray;
+    font-size: 13px;
+    height: 25px;
+    color: gray;
+    /*position: relative;*/
+}
+
+.top ul{
+    /*position: absolute;
+    /*top:50%;*/
+    /*transform: translateY(-50%);*/
+}
+.top .top-right{
+    float: right;
+    margin-right: 20px;
+}
+header .head{
+    width: 90%;
+    margin: 20px auto;
+    font-size: 13px;
+}
+header nav{
+    font-size: 16px;
+}
+header nav .top-right{
+    float: right;
 }
 header .head input{
     width: 28%;
@@ -40,7 +64,7 @@ header .head ul li #tu3{
     background-position:0px -80px; 
 }
 header nav ul li span{
-    display: block;
+    display: inline-block;
     background-image: url(lab1img/mark_nav.png);
     background-repeat: no-repeat;
     width: 22px;
@@ -70,6 +94,7 @@ section .secontent{
     margin-top: 20px;
 }
 section .secontent .info{
+    padding-top: 20px;
     display: inline-block;
     width: 30%;
     border: 1px solid #eee;
@@ -116,6 +141,7 @@ section .secontent .info ul li #tu11{
     background-position:0px -200px;
 }
 section .secontent .address{
+    padding-top: 20px;
     width: 68%; 
     float: right;
 }
