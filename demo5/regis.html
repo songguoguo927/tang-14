@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>login</title>
+        <title>regist</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="lab2.css" rel="stylesheet">
@@ -25,21 +25,29 @@
             <div class="left-img">
                 <img src="lab2img/loginad_06.png" alt="">
             </div>
-            <div class="login sec-right">
-                <div class="xjm rig-content">
-                    
-                
-                <h4>登录</h4>
-                <p>没有账号？<a href="#">立即注册</a></p>
-                <form>
-                    <input type="text" name="id" value="" >
-                     <input type="password" name="password" value="" >
-                </form>
-                <button type="submit">登录</button><a href="#">忘记密码？</a>
-                </div>
+            <div class="register sec-right">
+                <div class="rig-content">
+                    <h4>注册</h4>
+                    <p>已有账号？<a href="#">立即登录</a></p>
+                    <form>
+                        <div class="shuru">
+                            <span>手机号：</span><input type="text" name="id" value="">
+                        </div>
+                        <div class="shuru">
+                            <span>新密码：</span><input type="password" name="password" value="">
+                        </div>
+                        <div class="shuru">
+                            <span>确认密码：</span><input type="password" name="repassword" value="">
+                        </div>
+                        <div class="shuru">
+                            <span>验证码：</span><input type="text" name="yzm" value=""> <button type="" class="fontsize graybtn">免费获取手机验证码</button>               
+                        </div>
+                        <input type="checkbox" name="" value="" checked="checked"><a href="#" class="fontsize">我已认真阅读并同意《用户注册协议》</a>
+                    </form>
+                    <button type="submit" class="fontsize bluebtn">同意协议并注册</button>
+                 </div>
             </div>
-            
-        </section>
+            </section>
     
     <footer>
         <div class="foot-main">
