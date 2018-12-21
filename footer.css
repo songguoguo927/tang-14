@@ -2,7 +2,7 @@ ul li{
     list-style: none;
     display: inline-block;
 }
-a{
+a,li{
     text-decoration: none;
     color: gray;
 }
@@ -13,8 +13,9 @@ footer .foot-main{
 footer .foot-main .left{
     width: 60%;
     display: inline-block;
+    text-align: center;
 }
-footer .foot-main .left ul{
+footer .foot-main .left .left-top{
     margin-top: 50px;
     display: inline-block;
 }
@@ -36,11 +37,23 @@ footer .foot-main .left .left-top li .footItem{
     top:10px;
 }
 footer .foot-main .middle{
-    width: 18%;   
+    padding-top: 36px;
+    width: 15%;
     float: right;
+    background-image: url(footerimg/phone.png);
+    background-repeat: no-repeat;
+    background-position: 50% 22px;
+   
+}
+footer .foot-main .middle p{
+    text-align: center;
+}
+footer .foot-main .middle img{
+    margin: 0 auto;
+    display: block;
 }
 footer .foot-main .right{
-    width: 20%;    
+    width: 25%;    
     float: right;
 }
 footer .foot-main .right #tel a{

@@ -1,6 +1,11 @@
+a,li{
+    text-decoration: none;
+    color: gray;
+    font-size: 0.8em;
+}
 header{
     width: 80%;
-    margin: 0 auto;
+    margin: 20px auto;
     height: 92px;
 }
     .headLeft{
@@ -14,23 +19,57 @@ section{
     height: 500px;
     margin: 0 auto;
 }
-    .left-img{
+section .left-img{
         width: 50%;
        float:left;
+       
     }
-    .login{
-        width: 50%;
+   section .left-img img{
+        border-right: 1px solid rgba(0,119,192,0.2);
+    }
+ .login{
+        width: 48%;
         float: right;
+        
     }
-        .login-content{
+  .login-content{
             padding:28px;
             text-align: center;
         }
+  .login-content p{
+                    width: 76%;
+                    text-align: right;
+                    font-size: 0.8em;
+                }
+
         input{           
             display: block;
             margin: 0 auto;
             line-height: 2;
-            margin-bottom: 10px;
+            margin-bottom: 29px;
             border-radius: 8px;
             width: 50%;
+            border: 1px solid;
+        }
+        input[name="id"]{
+            background-image: url(lab2img/id.png);
+            background-repeat: no-repeat;
+            background-position-y: 40%;
+        }
+        input[name="password"]{
+            background-image: url(lab2img/password.png);
+             background-repeat: no-repeat;
+             background-position-y: 40%;
+        }
+        input:focus{
+            border: 1px solid;
+            border-radius: 8px;
+        }
+        button{
+            width: 34%;
+            border: none;
+            background-color: rgba(0,119,192,1);
+            height: 30px;
+            margin-right:21px;
+            color: white;
         }
