@@ -1,0 +1,50 @@
+footer .foot-main{
+    background: lightgray;
+    height: 200px;
+}
+footer .foot-main .left{
+    width: 60%;
+    display: inline-block;
+}
+footer .foot-main .left ul{
+    margin-top: 50px;
+    display: inline-block;
+}
+footer .foot-main .left .left-top .btncnt{
+    display: inline-block;
+    width:130px;
+    height: 46px;
+    font-size: 12px;
+    background-color: white;
+    border-radius: 42px;
+    border: 1px solid #eee;
+    position: relative;
+}
+footer .foot-main .left-bottom li{
+    text-indent: 10px;
+}
+footer .foot-main .left .left-top li .footItem{
+    position: absolute;
+    top:10px;
+}
+footer .foot-main .middle{
+    width: 18%;   
+    float: right;
+}
+footer .foot-main .right{
+    width: 20%;    
+    float: right;
+}
+footer .foot-main .right #tel a{
+    color: orange;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+footer .bottom{
+    background: black;
+    color: white;
+    text-align: center;
+}
+footer .bottom p{
+    margin:0px;
+}
