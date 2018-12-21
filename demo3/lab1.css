@@ -117,13 +117,18 @@ header .nav span{
     height: 22px;
 }
 
-header .nav #tu4{
+header .nav .nav-right #tu4{
     background-position:0px -22px;
 }
-header .nav #tu5{
+header .nav .nav-right #tu5{
     background-position:0px -66px;
 }
-
+header .nav .nav-right a:hover #tu4{
+     background-position:0px 0px;
+}
+header .nav .nav-right a:hover #tu5{
+     background-position:0px -44px;
+}
 section{
     background: whitesmoke;
 }

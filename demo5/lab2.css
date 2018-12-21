@@ -1,0 +1,36 @@
+header{
+    width: 80%;
+    margin: 0 auto;
+    height: 92px;
+}
+    .headLeft{
+    float: left;
+    }
+    .UL{
+    float: right;
+    }
+section{
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+}
+    .left-img{
+        width: 50%;
+       float:left;
+    }
+    .login{
+        width: 50%;
+        float: right;
+    }
+        .login-content{
+            padding:28px;
+            text-align: center;
+        }
+        input{           
+            display: block;
+            margin: 0 auto;
+            line-height: 2;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            width: 50%;
+        }
