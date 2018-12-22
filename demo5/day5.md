@@ -54,7 +54,8 @@ if(typeof(Worker)!==“undefined”){
     - 从而影响用户体验
 - 使用worker的计算方式
 
--[] demo做个出来宝贝
+[demo-我写的](my-work)
+[demo-tang](tang-work)
 
 ## localstorage  sessionstorage
 本地存储 会话存储
