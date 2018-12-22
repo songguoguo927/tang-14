@@ -6,23 +6,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--<link href="css/style.css" rel="stylesheet">-->
     </head>
-    <body>
+   <body>
         <label for="N">求从1加到n的和：</label>
         <input type="text" name="N" value="" placeholder="请输入n的值">
-        <div class="result">
-            
-        </div>
+        <br>
+        <label>结果为：</label>
+        <p id="res"></p>
         <button onclick="add()">求和</button>
+        <a>当数值过大时可能计算时间会长一点，有可能会使这个页面卡住，这个时候我们就可以利用web worker，将这个计算过程交给另一个线程，则该页面不会卡住，其他照常都能运行</a>
     <script>
-
+        // var myWorker = new worker('work.js');
+        // myWorker.postMessage(data);
         function add(){
-            var n = document.getElementsByName('N')[0].value;
-            var sum = 0;
+            let n = document.getElementsByName('N')[0].value;
+            let sum=0;
             for(i=1;i<=n;i++){
                  sum = sum +i; 
             }
-            document.getElementsByClassName('result')[0].append
-            console.log(sum)
+           
+             document.getElementById("res").innerHTML = sum;
+            
         }
     </script>
     </body>  
