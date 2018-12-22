@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+   输入数字:<input  id="number"><button onclick="cacu()">计算</button>
+
+    结果: <span id="result"></span>
+   <h1>hello workers</h1>
+</body>
+</html>
+<script>
+    function  cacu(){
+
+        let number=parseInt(document.getElementById("number").value);
+         var w=new Worker("work.js");
+        w.postMessage(number);
+
+        w.onmessage= function (e) {
+            console.log(e);
+            document.getElementById("result").innerText= e.data;
+        };
+
+    }
+</script>
