@@ -32,7 +32,7 @@ a{
     margin-right: 20px;
 }
 header{
-    border-bottom: 2px solid #337ab7;
+    border-bottom: 2px solid rgba(0,160,222,1);;
     font-size: 0.8em;
 }
 .header-content{
@@ -53,7 +53,7 @@ header .head input{
     width: 28%;
     height: 30px;
     border-radius: 20px;
-    border: 1.5px solid #337ab7;;
+    border: 1.5px solid rgba(0,160,222,1);
     background-image: url(lab1img/mark_search_05.png);
     background-repeat: no-repeat;
     background-position: right;
@@ -95,14 +95,14 @@ header .nav ul{
     margin-bottom: 0px;
 }
 header .nav a:hover{
-    border-bottom: 3px solid blue;
+    border-bottom: 3px solid rgba(0,160,222,1);;
     color: black;
 }
 header .nav .nav-left{
     float: left;
 }
 header .nav .nav-left .active{
-    border-bottom: 3px solid blue;
+    border-bottom: 9px solid rgba(0,160,222,1);;
 }
 header .nav .nav-right{
     position: absolute;
@@ -189,7 +189,7 @@ section .secontent .info ul li .infoitem span{
 }
 section .secontent .info ul li .infoitem:hover{
     color: white;
-    background-color:#337ab7; 
+    background-color:rgba(0,160,222,1); 
 }
 section .secontent .info ul li .infoitem:hover a{
     color: white;
@@ -256,12 +256,12 @@ section .secontent .address ul li .addressFunc{
     float: right;
 }
 section .secontent .address ul li .addressFunc a{
-    color: blue;
+    color: rgba(0,160,222,1);
     font-size: 0.8em;
 }
 section .secontent .address button{
     color: white;
-    background-color: #337ab7;
+    background-color: rgba(0,160,222,1);
     height: 32px;
     border: none;
 }

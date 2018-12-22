@@ -4,9 +4,26 @@
         <title>web worker demo</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <!--<link href="css/style.css" rel="stylesheet">-->
     </head>
     <body>
-    
-    </body>
+        <label for="N">求从1加到n的和：</label>
+        <input type="text" name="N" value="" placeholder="请输入n的值">
+        <div class="result">
+            
+        </div>
+        <button onclick="add()">求和</button>
+    <script>
+
+        function add(){
+            var n = document.getElementsByName('N')[0].value;
+            var sum = 0;
+            for(i=1;i<=n;i++){
+                 sum = sum +i; 
+            }
+            document.getElementsByClassName('result')[0].append
+            console.log(sum)
+        }
+    </script>
+    </body>  
 </html>

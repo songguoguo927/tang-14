@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <form name="myform">
+      key:<input type="text" name="skey"><p></p>
+      value:<input type="text" name="svalue"><p></p>
+      <input type="button" onclick="addvalue()" value="添加数据">
+      <input type="button" onclick="getvalues()" value="查看内容">
+  </form>
+ <div>
+     显示数据
+     <ul id="listitem">
+
+     </ul>
+ </div>
+</body>
+</html>
+<script>
+    function  addvalue(){
+        var wlstorage=window.localStorage;
+        //取出 key ,value
+        var key=document.myform.skey.value;
+        var value=document.myform.svalue.value;
+         wlstorage.setItem(key,value);
+
+    }
+
+    function  getvalues(){
+        var st=window.localStorage;
+        var obj_ul=document.getElementById("listitem");
+        var lilength=obj_ul.childNodes.length;
+        for(i=0;i<lilength;i++){
+            obj_ul.removeChild(obj_ul.childNodes[0]);
+        }
+
+        console.log(obj_ul.childNodes);
+        for(i=0;i<st.length;i++){
+            var stkey=st.key(i);
+            var stvalue=st.getItem(stkey);
+            var li_item=document.createElement("li");
+            li_item.innerText=stkey+","+stvalue;
+            console.log(stkey+","+stvalue);
+            document.getElementById("listitem").appendChild(li_item);
+        }
+    }
+
+</script>
