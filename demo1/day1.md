@@ -16,7 +16,8 @@
  **编辑器**
 > tang-say
 
-webstrom hbuild(第一次听)
+webstrom hbuild(第一次听) 又听了个phpstrom（暂时把webstrom用熟来）
+cocos creator开发游戏
 
 >myadd: vscode atom sublime
 

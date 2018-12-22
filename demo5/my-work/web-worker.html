@@ -5,6 +5,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--<link href="css/style.css" rel="stylesheet">-->
+        <style>
+            a{
+                display: block;
+                width: 250px;
+                border-radius: 5px;
+                margin: 30px;
+                padding: 10px;
+                color: white;
+                background-color: black;
+                opacity: 0.7;
+            }
+        </style>
     </head>
    <body>
         <label for="N">求从1加到n的和：</label>
@@ -12,7 +24,8 @@
         <br>
         <label>结果为：</label>
         <p id="res"></p>
-        <button onclick="add()">求和</button>
+        <button onclick="add()">求和</button><p></p>
+        <label>tip:</label>
         <a>当数值过大时可能计算时间会长一点，有可能会使这个页面卡住，这个时候我们就可以利用web worker，将这个计算过程交给另一个线程，则该页面不会卡住，其他照常都能运行</a>
     <script>
     function add(){
