@@ -24,10 +24,9 @@
             
             console.log(n);
             myWorker.onmessage = function (e){
-            console.log(e)
-         }
-         
-        // document.getElementById("res").innerHTML = sum;
+             // console.log(e);//计算后打印出的e，同理我们要的是e.data
+          document.getElementById("res").innerHTML = e.data;
+        }        
     }
  }
     </script>
