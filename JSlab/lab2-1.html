@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript面向对象</title>
+</head>
+<body>
+<script>
+    var str1 = 'This is my room. Near the window there is a desk.';
+    console.log(str1);
+    var newStr = str1.replace('m','M');
+    // console.log(newStr);
+    // 实践中发现javascript中的replace方法只替换字符串中第一次出现的目标
+    // 解决方案就是用正则表达式 /字母/g
+    // var newStr = str1.replace(/m/g,'M');
+    console.log(newStr);
+
+    var arr = str1.split(' ');
+    console.log(arr);
+
+    var po = str1.indexOf('window');
+    console.log(po); //结果26
+
+    var jq = str1.substring(5,10);
+    console.log(jq);
+
+    var uc = str1.toUpperCase();
+    console.log(uc);
+
+</script>
+</body>
+</html>

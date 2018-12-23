@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript事件机制</title>
+</head>
+<style>
+    div{
+        color:blueviolet;
+        background-color: #c3c3c3;
+        width: 200px;
+        margin-top: 10px;
+        display:none;
+    }
+</style>
+<body>
+<button id="btn1" onclick="show()">显示</button>
+<button id="btn2" onclick="hide()">隐藏</button>
+<div id="content">
+    mfdhfgjas fwqigvqgfbcsgdacbgfsja
+</div>
+<script>
+    function show(){
+        document.getElementById('content').setAttribute('style','display:block');
+    }
+    function hide(){
+        document.getElementById('content').setAttribute('style','display:none');
+    }
+
+</script>
+</body>
+</html>

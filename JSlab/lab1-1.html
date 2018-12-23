@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript基础及函数</title>
+</head>
+<body>
+<input type="text" value="" class="test1">
+<input type="text" value="" class="test2">
+<input type="text" value="" class="test3">
+<button id="toSub">判断能否构成三角形</button>
+<p class="result"></p>
+</body>
+<script>
+    function check() {
+        var a = parseInt(document.getElementsByClassName('test1')[0].value),
+            b = parseInt(document.getElementsByClassName('test2')[0].value),
+            c = parseInt(document.getElementsByClassName('test3')[0].value);
+        // console.log(a, b, c)
+        if ((a+b) > c && Math.abs(a-b) < c ) {
+            // console.log('能构造成三角形。。。')
+            document.getElementsByClassName('result')[0].innerText = '能构成三角形'
+        } else {
+            document.getElementsByClassName('result')[0].innerText = '不能构成三角形'
+        }
+    }
+    document.getElementById('toSub').addEventListener('click', function () {
+        check();
+    },false)
+</script>
+</html>

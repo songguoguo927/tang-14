@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态时钟</title>
+</head>
+<style>
+    #time{
+        width: 250px;
+        height: 22px;
+        background-color: rgba(92,149,223,0.8);
+        border-radius: 50%;
+        margin: 0 auto;
+        padding: 124px;
+        color: white;
+        font-size: 1.3em;
+    }
+</style>
+<body>
+<div id="time">
+
+</div>
+<script>
+    setInterval(function () {
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth()+1;
+        var dates = date.getDate();
+
+        var hours=checkTime(date.getHours());   //获取时
+        var minute=checkTime(date.getMinutes());  //获取分
+        var second=checkTime(date.getSeconds());  //获取秒
+
+        function checkTime(i) {
+            if(i<10) return '0'+i;
+            return i;
+        }
+
+        var box = document.getElementById('time');
+        box.innerHTML=year + '年' + month + '月' + dates + '日 ' + hours + ':' +minute + ':' +second;
+
+    },1000);//setInterval(fn,i) 定时器，每隔i秒执行fn
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>求成绩</title>
+</head>
+<body>
+<input type="text" value="" class="psGrade" placeholder="请输入平时成绩">
+<input type="text" value="" class="ksGrade" placeholder="请输入考试成绩">
+<input id="result">
+<button onclick="grade()">求总分</button>
+</body>
+<script>
+    function grade() {
+        let a = parseInt(document.getElementsByClassName('psGrade')[0].value),
+            b = parseInt(document.getElementsByClassName('ksGrade')[0].value);
+        var Grade = document.getElementById('result');
+        var c = Math.round(a*0.3 + b*0.7);
+        if ((a=="" || isNaN(a)) || (b=="" || isNaN(b))) {
+            Grade.value = null;
+            alert("输入数据有误，请重新输入！")
+        } else {
+            Grade.value = c;
+        }
+//四舍五入Math.round()
+        // console.log(c)
+    }
+
+</script>
+</html>

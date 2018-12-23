@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .yellow{
+        background-color: yellow;
+    }
+    .red{
+        background-color: red;
+    }
+    .black{
+        background-color: black;
+    }
+</style>
+<body id="bd">
+<button id="yellow" onclick="by()">背景变黄</button>
+<button id="red" onclick="br()">背景变红</button>
+<button id="black" onclick="bb()">背景变黑</button>
+<button id="reset" onclick="bn()">恢复原样</button>
+</body>
+<script>
+    function by(){
+        document.getElementById('bd').setAttribute('class','yellow');
+    }
+    function br(){
+        document.getElementById('bd').setAttribute('class','red');
+    }
+    function bb(){
+        document.getElementById('bd').setAttribute('class','black');
+    }
+    function bn(){
+        document.getElementById('bd').setAttribute('class','');
+    }
+
+</script>
+</html>
