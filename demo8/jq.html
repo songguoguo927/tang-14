@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery学习</title>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+</head>
+<body>
+	<span id="myspan">click me</span>
+</body>
+</html>
+<script>
+		$(function () {
+			console.log('11111');
+			$("#myspan").click(function (){
+				console.log('22222');
+				// alert("hello jquery");
+				// $("#myspan").get(0).innerText='hello javascript';
+				// $("#myspan")[0].innerText='hello javascript';//等价
+				$('#myspan').text('hello xjm');
+			});
+			
+		});
+</script>
