@@ -51,8 +51,10 @@ section .left-img{
             line-height: 2;
             margin-bottom: 29px;
             border-radius: 8px;
-            width: 50%;
+            width: 45%;
             border: 1px solid;
+            outline: none;
+            padding-left: 20px;
         }
         
        
