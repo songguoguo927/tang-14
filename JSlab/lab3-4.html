@@ -7,23 +7,71 @@
 <body>
 <h1>用户注册</h1>
 <form>
-    <lable for="account">输入账号：</lable><input type="text" name="account"><br>
-    <lable for="pwd">输入密码：</lable><input type="password" name="pwd"><br>
-    <lable for="email">输入邮箱：</lable><input type="email" name="email"><br>
-    <lable for="sfzh">身份证号：</lable><input type="text" name="sfzh"><br>
-    <lable for="date">出生日期：</lable><input type="date" name="date"><br>
-    <label for="yzm">验证码：</label><input name="yzm"><br>
-    <button type="submit" onclick="subMit()">注册</button>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAAjCAYAAABfLc7mAAADPklEQVR4nO3aLY8TURQG4Fesgn9RBZX8BTaIAqaigjR8SYLCLZJsEMiSEBSuFQgMCUgEpg1Jk7UIks0GRdbQhGTUrIDZnLm9H+fce25npox4Tee2ncxzz/1qURRF2YeXR9c+Nn4P0oDbcDhYNX6zWjk/XZfnp+seeJ+RKTQXe++B24gMfFXF/u+B24gs7xRuSF9V7yXw3ScPrDGRgePkmzm+9ykqmg/k9/c/1sQAAz/F378Zz8vNeF57bTE5KReTE31gFy6N5sNtEtgFayZHFVeoJizFVQfm4JrIwGEJfOkcMBe3SswK3AVqQ7XhqgJzqjRnJUs6g8Zn2YZjznXgYRQqp72JKwEGbvGBfR/km5O7iJvSCTRQfbjZKvjXu1e1+DrCLpBzzr2pbblDb6uAzWsU29YRhoOVs0O0DVejMwBrMSjwlIX7ZvY5coi+7wcOIYeu00o2RwBOUoCB2zsBTq1SMy7MbKtoE1G6TeIO18D7rdds6BRX0ik0UmFK5+AQKI0LMitwCDn0Xs05OVS5WqOEiVpVaSquCWpe3zlwzD44FzKt3udv71wm5TNt6BSVvk5xgWcqoFzETuyDU5Fdcy/FjoEHvtVQF6NpCbyutbGdZNk6hwkaGiWAxyzAna+iY9qlIMesnH3wrBOk0bRcjKbe8+gKErjqrNDQFMHBUweWnk7lRtbYGlWgkoo3cSVDLidcuE4BS5FTcCUHDia4Dffygf+r7ioawNJEAy9n0xrYcjYNhrYHrrPeMxysWO0oMKc9jfSBV5VJYV0VT39RAq5EYTcCnFrBwA/2F3MqOVTBvioNdQBzyF3O6nOutENJ0wpgySIr5helELINOPas1wQ9ODqrXZfsc12/Caeu6rdw8KEb26QYZIobg2pbFB0cnW3BSnF9wK6kwLf+oCMmm/FcvMDyrXJdsDZgboqiYB96pMC39iw6BpVWKRc4tG3xwcbiapxFh+CBv9iqwMANEbIWqG3opcDAy2wPs43ANBSYVjmwZg31UX+b1UDd5fdqx5yDc3ZATnxDfHbgWFTgZuOQXOA2Rx1Y628rbU9XkFWAmwQFJj1wLuA2Vilw2ANrAe9jgBc9cJ8eeO/TFeALlUTGH2s/JDkAAAAASUVORK5CYII=">
+    输入账号：<input type="text" id="account"><br>
+   输入密码：<input type="password" id="psw"><br>
+    输入邮箱：<input type="email" id="email" placeholder="格式为:xxx@xxx.com"><br>
+    身份证号：<input type="text" id="sfzh" onblur="addCsrq()"><br>
+    出生日期：<input type="text"  style="width: 45px" id="year"  onfocus=this.blur()>
+                               <input type="text" style="width: 45px" id="month"  onfocus=this.blur()>
+                                <input type="text"  style="width: 45px" id="day"  onfocus=this.blur()><br>
+    验证码：<input id="yzm">    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAAjCAYAAABfLc7mAAADPklEQVR4nO3aLY8TURQG4Fesgn9RBZX8BTaIAqaigjR8SYLCLZJsEMiSEBSuFQgMCUgEpg1Jk7UIks0GRdbQhGTUrIDZnLm9H+fce25npox4Tee2ncxzz/1qURRF2YeXR9c+Nn4P0oDbcDhYNX6zWjk/XZfnp+seeJ+RKTQXe++B24gMfFXF/u+B24gs7xRuSF9V7yXw3ScPrDGRgePkmzm+9ykqmg/k9/c/1sQAAz/F378Zz8vNeF57bTE5KReTE31gFy6N5sNtEtgFayZHFVeoJizFVQfm4JrIwGEJfOkcMBe3SswK3AVqQ7XhqgJzqjRnJUs6g8Zn2YZjznXgYRQqp72JKwEGbvGBfR/km5O7iJvSCTRQfbjZKvjXu1e1+DrCLpBzzr2pbblDb6uAzWsU29YRhoOVs0O0DVejMwBrMSjwlIX7ZvY5coi+7wcOIYeu00o2RwBOUoCB2zsBTq1SMy7MbKtoE1G6TeIO18D7rdds6BRX0ik0UmFK5+AQKI0LMitwCDn0Xs05OVS5WqOEiVpVaSquCWpe3zlwzD44FzKt3udv71wm5TNt6BSVvk5xgWcqoFzETuyDU5Fdcy/FjoEHvtVQF6NpCbyutbGdZNk6hwkaGiWAxyzAna+iY9qlIMesnH3wrBOk0bRcjKbe8+gKErjqrNDQFMHBUweWnk7lRtbYGlWgkoo3cSVDLidcuE4BS5FTcCUHDia4Dffygf+r7ioawNJEAy9n0xrYcjYNhrYHrrPeMxysWO0oMKc9jfSBV5VJYV0VT39RAq5EYTcCnFrBwA/2F3MqOVTBvioNdQBzyF3O6nOutENJ0wpgySIr5helELINOPas1wQ9ODqrXZfsc12/Caeu6rdw8KEb26QYZIobg2pbFB0cnW3BSnF9wK6kwLf+oCMmm/FcvMDyrXJdsDZgboqiYB96pMC39iw6BpVWKRc4tG3xwcbiapxFh+CBv9iqwMANEbIWqG3opcDAy2wPs43ANBSYVjmwZg31UX+b1UDd5fdqx5yDc3ZATnxDfHbgWFTgZuOQXOA2Rx1Y628rbU9XkFWAmwQFJj1wLuA2Vilw2ANrAe9jgBc9cJ8eeO/TFeALlUTGH2s/JDkAAAAASUVORK5CYII="><br>
+    <button onclick="subMit()">注册</button>
+
 </form>
 </body>
 <script>
+    /*出生日期项目的三个文本框为只读，ok
+当光标离开身份证号时自动填写出生日期项中的三个文本框内容。ok
+* 点击注册时完成以下验证：
+a)所有项必须输入内容ok
+b)密码长度至少为6位，ok不能包含身份证号的生日及后6位内容。
+c)邮箱只能有一个“@”并在@后至少有一个点(.)
+d)验证码可以不区分大小写*/
+    var sfzh = document.getElementById('sfzh').value;
+     var user = document.getElementById('account').value;
+    var psw = document.getElementById('psw').value;
+    var email = document.getElementById('email').value;
+    var yzm = document.getElementById('yzm').value;
     function subMit(){
-        var a = document.getElementsByTagName('input').values();
-        console.log(a)
-        if(a==null){
-            alert("tian")
+           // 有没有填写
+        if(user.length == 0){
+            alert("请将用户名填写完整");
         }
+        else if(psw.length < 6){
+            alert("密码长度至少为6位");
+        }
+        else if(email.length == 0){
+            alert("邮箱格式不给你啦");
+        }
+        else if(sfzh.length <= 18){
+            alert("身份证号18位欸");
+        }
+        else if(yzm.length == 0){
+            alert("填下验证码啊");
+        }
+        else{
+
+            alert("yo 注册成功 ");
+            //push进去
+        }
+    }
+    function addCsrq() {
+        var bornYear = sfzh.substr(6,4);
+        document.getElementById('year').value = bornYear;
+        // alert(bornYear);
+        var bornMonth = sfzh.substr(10,2);
+        document.getElementById('month').value = bornMonth;
+        //alert(bornMonth);
+        var bornDay = sfzh.substr(12,2);
+        document.getElementById('day').value = bornDay;
+        //alert(bornDay);
+        var birthday = sfzh.substr(10,4);
+        var lastSix = sfzh.substr(12,6);
+        console.log(birthday);
+        console.log(lastSix);
+    // if(psw.match(/birthday/g).length != null&&psw.match(/sfzh.substr(-1,6)/g).length != null){
+    //         alert("不能包含身份证号的生日及后6位内容")
+    //     }
     }
 </script>
 </html>
