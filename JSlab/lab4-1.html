@@ -8,20 +8,17 @@
     img {
         width: 100%;
     }
-
     .li_img {
         width: 270px;
         float: left;
         list-style: none;
     }
-
     .ul_img {
         width: 6000px;
         padding: 0px;
         margin: 0px;
         transition: all 2s;
     }
-
     .main_div {
         width: 270px;
         overflow: hidden;
@@ -84,12 +81,25 @@
             }
         }, 4000);
     }
-    showtime();
     var div_img = document.getElementsByClassName('div_img');
     for (var b  = 0;b<div_img.length;b++){
         div_img[b].index = b;
-        div_img[b].onmouseover = function () {}
-        div_img[b].onmouseout = function () {}
+        div_img[b].onmouseover = function () {
+            clearInterval(timer);
+            //为了控制方向
+            if (this.index == 3) {
+                isgo = true;
+            }
+            if (this.index == 0) {
+                isgo = false;
+            }
+            //让count值对应
+            count = this.index;
+            ul_img.style.transform = "translate(" + -270 * this.index + "px)";
+        }
+        div_img[b].onmouseout = function () {
+            showtime();
+        }
     }
 </script>
 </body>
