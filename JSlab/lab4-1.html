@@ -4,7 +4,83 @@
     <meta charset="UTF-8">
     <title>四张图片轮播</title>
 </head>
+<style>
+    .mainShow{
+        background-color: rgba(81,80,63,1);;
+        margin: 20px auto;
+        width: 280px;
+        padding: 12px;
+    }
+    .nowShow{
+        width: 270px;
+        height: 270px;
+    }
+    .nowShow,.waitShow{
+        text-align: center;
+    }
+    .waitShow img{
+        width: 65px;
+    }
+    .waitShow img:hover{
+        width: 67px;
+        /*border: 1px solid red;*/
+    }
+</style>
 <body>
+<div class="mainShow">
+    <div class="nowShow">
+        <img class="nowing" src="">
+    </div>
+    <div class="waitShow">
+        <img class="Img" src="lab4img/cake1.png">
+        <img class="Img" src="lab4img/cake2.png">
+        <img class="Img" src="lab4img/cake3.png">
+        <img class="Img" src="lab4img/cake4.png">
+    </div>
+</div>
 
+<script>
+    /*实现在下方点击对应的图片，上方显示对应的图*/
+    var A = document.getElementsByClassName('Img');
+    console.log(A)
+        A.click = function (e) {
+        console.log(this)
+        // console.log(e.src)
+
+    }
+    // var ingimg = document.getElementsByClassName('nowing');
+    // console.log(ingimg)
+    // box.innerHTML= '<h1>helo</h1>';
+    // console.log(box.innerHTML);
+    // var nowimg1 = document.getElementsByClassName('Img')[0].src;
+    // console.log(nowimg1);
+    // document.getElementsByClassName('nowing').setAttribute("src","nowimg1");
+    // ingimg.src = nowimg1;
+    // var nowimg2 = document.getElementsByClassName('Img')[1];
+    // var nowimg3 = document.getElementsByClassName('Img')[2];
+    // var nowimg4 = document.getElementsByClassName('Img')[3];
+    // nowimg1.onclick = function(e){
+    //     var box = document.getElementsByClassName('nowShow');
+    //     console.log(e.target);
+    //     // box.innerHTML= 'e.target';
+    //     box.innerHTML= '<h1>helo</h1>';/*为什么显示不出来内容？*/
+    //
+    //     console.log(box.innerHTML);
+    //
+    // }
+    // nowimg2.onclick = function(e){
+    //     console.log(e)
+    // }
+    // nowimg3.onclick = function(e){
+    //     console.log(e)
+    // }
+    // nowimg4.onclick = function(e){
+    //     console.log(e)
+    // }
+
+
+
+
+</script>
 </body>
 </html>
