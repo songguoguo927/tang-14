@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js作业1</title>
+</head>
+<body>
+<script>
+    if(null == undefined){
+        console.log('相等');
+        if(null === undefined){
+            console.log('全等');
+        }
+        else{
+            console.log('不全等');
+        }
+    }//结果相等，不全等
+    var a = 105,b = 8, c = 6, d = false;
+    //心算false
+    console.log(a>b&&b<c);//结果false
+    console.log(12+undefined);//结果NaN
+
+    function swap() {
+        var num1 = 1,num2 = 2,A;
+        console.log("交换前"+"a="+num1+" "+"b="+num2);
+        A = num1;
+        num1 = num2;
+        num2 = A;
+        console.log("交换后"+"a="+num1+" "+"b="+num2);
+    }
+    swap();
+</script>
+</body>
+
+</html>

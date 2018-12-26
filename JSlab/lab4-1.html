@@ -5,82 +5,92 @@
     <title>四张图片轮播</title>
 </head>
 <style>
-    .mainShow{
-        background-color: rgba(81,80,63,1);;
-        margin: 20px auto;
-        width: 280px;
-        padding: 12px;
+    img {
+        width: 100%;
     }
-    .nowShow{
+
+    .li_img {
         width: 270px;
-        height: 270px;
+        float: left;
+        list-style: none;
     }
-    .nowShow,.waitShow{
+
+    .ul_img {
+        width: 6000px;
+        padding: 0px;
+        margin: 0px;
+        transition: all 2s;
+    }
+
+    .main_div {
+        width: 270px;
+        overflow: hidden;
+        position: relative;
+        top: 100px;
+        left: 350px;
+    }
+    .waitShow .div_img{
+        display: inline;
         text-align: center;
     }
     .waitShow img{
-        width: 65px;
+        width:64px;
     }
-    .waitShow img:hover{
-        width: 67px;
-        /*border: 1px solid red;*/
+    .div_img:hover{
+        border: 0.5px solid red;
     }
 </style>
 <body>
-<div class="mainShow">
-    <div class="nowShow">
-        <img class="nowing" src="">
-    </div>
+<div class="main_div">
+    <ul class="ul_img">
+        <li class="li_img"><img src="lab4img/cake1.png"/></li>
+        <li class="li_img"><img src="lab4img/cake2.png"/></li>
+        <li class="li_img"><img src="lab4img/cake3.png"/></li>
+        <li class="li_img"><img src="lab4img/cake4.png"/></li>
+    </ul>
     <div class="waitShow">
-        <img class="Img" src="lab4img/cake1.png">
-        <img class="Img" src="lab4img/cake2.png">
-        <img class="Img" src="lab4img/cake3.png">
-        <img class="Img" src="lab4img/cake4.png">
+        <img class="div_img" src="lab4img/cake1.png"/>
+        <img class="div_img" src="lab4img/cake2.png"/>
+        <img class="div_img" src="lab4img/cake3.png"/>
+        <img class="div_img" src="lab4img/cake4.png"/>
     </div>
 </div>
 
 <script>
-    /*实现在下方点击对应的图片，上方显示对应的图*/
-    var A = document.getElementsByClassName('Img');
-    console.log(A)
-        A.click = function (e) {
-        console.log(this)
-        // console.log(e.src)
-
+    var count = 0;//跑动的次数
+    var isgo = false;
+    var timer;
+    /*获取ul元素*/
+    var ul_img = document.getElementsByClassName("ul_img")[0];
+    //获取所有的li图片元素
+    var li_img = document.getElementsByClassName("li_img");
+    function showtime() {
+        timer = setInterval(function () {
+            if (isgo == false) {
+                count++;
+                ul_img.style.transform = "translate(" + -270 * count + "px)";
+                if (count >= li_img.length - 1) {
+                    count = li_img.length - 1;
+                    isgo = true;
+                }
+            }
+            else {
+                count--;
+                ul_img.style.transform = "translate(" + -270 * count + "px)";
+                if (count <= 0) {
+                    count = 0;
+                    isgo = false;
+                }
+            }
+        }, 4000);
     }
-    // var ingimg = document.getElementsByClassName('nowing');
-    // console.log(ingimg)
-    // box.innerHTML= '<h1>helo</h1>';
-    // console.log(box.innerHTML);
-    // var nowimg1 = document.getElementsByClassName('Img')[0].src;
-    // console.log(nowimg1);
-    // document.getElementsByClassName('nowing').setAttribute("src","nowimg1");
-    // ingimg.src = nowimg1;
-    // var nowimg2 = document.getElementsByClassName('Img')[1];
-    // var nowimg3 = document.getElementsByClassName('Img')[2];
-    // var nowimg4 = document.getElementsByClassName('Img')[3];
-    // nowimg1.onclick = function(e){
-    //     var box = document.getElementsByClassName('nowShow');
-    //     console.log(e.target);
-    //     // box.innerHTML= 'e.target';
-    //     box.innerHTML= '<h1>helo</h1>';/*为什么显示不出来内容？*/
-    //
-    //     console.log(box.innerHTML);
-    //
-    // }
-    // nowimg2.onclick = function(e){
-    //     console.log(e)
-    // }
-    // nowimg3.onclick = function(e){
-    //     console.log(e)
-    // }
-    // nowimg4.onclick = function(e){
-    //     console.log(e)
-    // }
-
-
-
-
+    showtime();
+    var div_img = document.getElementsByClassName('div_img');
+    for (var b  = 0;b<div_img.length;b++){
+        div_img[b].index = b;
+        div_img[b].onmouseover = function () {}
+        div_img[b].onmouseout = function () {}
+    }
 </script>
 </body>
 </html>

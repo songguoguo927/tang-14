@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js作业2</title>
+    <style>
+        div{
+            background-color: pink;
+            width:200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<button onclick="hideshow()">隐藏/显示</button>
+<div class="content">
+    点击按钮可以对我进行隐藏显示切换
+</div>
+<script>
+    var str = 'hello world';
+    console.log(str+'中最后一个o出现的位置下标是'+str.lastIndexOf('o'));
+    console.log(str.substr(6));
+    console.log(str.toUpperCase());//转换成大写
+    console.log(str.split(' ',2));
+
+
+    var date = new Date();
+    console.log(date);
+    var year = date.getFullYear();
+    var month = date.getMonth()+1;
+    var dates = date.getDate();
+    var hours = date.getHours();
+    var minute = date.getMinutes();
+    var second = date.getSeconds();
+    console.log(year + '年-' + month + '月-' + dates + '日-' + hours + ':' +minute + ':' +second)
+    function hideshow() {
+        console.log('1111')
+        var oDiv = document.getElementsByClassName('content')[0];
+        if(oDiv.style.display == 'none'){
+            oDiv.style.display = 'block';
+        }else {
+            oDiv.style.display = 'none';
+        }
+    }
+</script>
+</body>
+</html>
