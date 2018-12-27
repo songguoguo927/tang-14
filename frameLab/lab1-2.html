@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .header,.footer{
+            background-color: #c3c3c3;
+        }
+        .form-inline{
+            display: block;
+            width: 25%;
+            margin: 0 auto;
+        }
+        .middle .hobby{
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .hobby input{
+            display: block;
+            width: 11%;
+        }
+        .form-group .form-control{
+            margin: 10px;
+        }
+        .middle{
+            margin: 0 auto;
+        }
+        .middle .btn{
+            float: right;
+            margin: 10px;
+        }
+        p{
+            padding-top: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="header col-md-12">
+            <h1>Logo</h1>
+        </div>
+        <div class="middle col-md-9">
+            <p>注册</p>
+            <form class="form-inline">
+                <div class="form-group">
+                    <input name="username" id="username" class="form-control" placeholder="用户名">
+                </div>
+                <div class="form-group">
+               <input type="email" class="form-control" id="exampleInputEmail2" placeholder=" Email:jane.doe@example.com">
+                </div>
+                <div class="form-group">
+                    <input name="pwd" id="pwd" class="form-control"  placeholder="密码">
+                </div>
+                <div class="form-group">
+                    <input name="repwd" id="repwd" class="form-control" placeholder="确认密码">
+                </div>
+                <div class="form-group">
+                    <input name="sex" id="sex" class="form-control" placeholder="性别">
+                </div>
+                <div class="form-group hobby">
+                    <label>爱好:</label><input type="checkbox" name="hobby">music
+                    <input type="checkbox" name="hobby">film
+                    <input type="checkbox" name="hobby">sport
+                </div>
+                <button type="submit" class="btn btn-primary">提交</button>
+                <button type="reset" class="btn btn-primary">重置</button>
+            </form>
+        </div>
+        <div class="footer col-md-12">
+            <p>©xjm</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
