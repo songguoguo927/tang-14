@@ -5,6 +5,21 @@
     <title>随机红包</title>
 </head>
 <body>
-
+<script>
+    /*思路，一，先从0-250中随机一个数，得到第一个红包的金额
+    * 二，从0-剩余金额中随机一个数，以此类推
+    * 最后一步把剩余的钱放最后一个红包里*/
+    let redpackage = function () {
+        let moneySum = 250,money;
+        for (let i = 1;i<=5;i++) {
+                money = (Math.random() * moneySum).toFixed(2);
+            //toFixed(2)保留两位小数
+            moneySum = moneySum -money;
+            console.log("第"+i+"位："+ money+"元");
+            console.log(moneySum);
+        }
+    }
+   redpackage();
+</script>
 </body>
 </html>
